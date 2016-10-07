@@ -8,9 +8,9 @@
 
 import random
 
-team_name = 'team 5' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+team_name = 'Kevin and Johnny' # Only 10 chars displayed.
+strategy_name = 'The best'
+strategy_description = 'The 1v1 code'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -28,11 +28,11 @@ def move(my_history, their_history, my_score, their_score):
     elif my_history[-1]=='c' and their_history[-1]=='b':
             return 'b' # Betray if they betray last round
     
-    elif 'c' in their_history[-1:] and random.random()<0.3: # If the other player has colluded within last round,              
-      #  and 20% of the other rounds
-        return 'b'         # Betray and 30% of the other rounds     
+    elif 'c' in their_history[-1:] and random.random()<0.005: # If the other player has colluded within last round,              
+      #  and 0.5% of the other rounds
+        return 'b'         # Betray and 99.5% of the rounds     
     else:
-        return 'c'         # but 70% of the time collude
+        return 'c'         # but 0.5% of the time collude
                 
 
            
